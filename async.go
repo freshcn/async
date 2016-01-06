@@ -107,3 +107,8 @@ func (this *Async) Run() (chan map[string][]interface{}, bool) {
 
 	return result, true
 }
+
+// 清空任务队列.
+func (this *Async) Clean() {
+		this.tasks = make(map[string]asyncRun)
+}
