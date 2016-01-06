@@ -110,5 +110,5 @@ func (this *Async) Run() (chan map[string][]interface{}, bool) {
 
 // 清空任务队列.
 func (this *Async) Clean() {
-		this.tasks = make(map[string]asyncRun)
+	this.tasks = make(map[string]asyncRun)
 }
