@@ -4,11 +4,13 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"runtime"
 	"testing"
 	"time"
 )
 
 func TestAsync(t *testing.T) {
+	runtime.GOMAXPROCS(runtime.NumCPU())
 	fmt.Println("program start")
 	useTime := make([]int64, 2)
 	startTime := time.Now().UnixNano()

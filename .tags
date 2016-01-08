@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+asyncRun	/Users/chenzhouyu/go/src/github.com/freshcn/async/async.go	/^type asyncRun struct {$/;"	type	line:13
+Async	/Users/chenzhouyu/go/src/github.com/freshcn/async/async.go	/^type Async struct {$/;"	type	line:19
+NewAsync	/Users/chenzhouyu/go/src/github.com/freshcn/async/async.go	/^func NewAsync() Async {$/;"	func	line:25
+Add	/Users/chenzhouyu/go/src/github.com/freshcn/async/async.go	/^func (this *Async) Add(name string, handler interface{}, params ...interface{}) bool {$/;"	func	line:33
+Run	/Users/chenzhouyu/go/src/github.com/freshcn/async/async.go	/^func (this *Async) Run() (chan map[string][]interface{}, bool) {$/;"	func	line:63
+Clean	/Users/chenzhouyu/go/src/github.com/freshcn/async/async.go	/^func (this *Async) Clean() {$/;"	func	line:112
+TestAsync	/Users/chenzhouyu/go/src/github.com/freshcn/async/async_test.go	/^func TestAsync(t *testing.T) {$/;"	func	line:11
+get	/Users/chenzhouyu/go/src/github.com/freshcn/async/async_test.go	/^func get(url string) string {$/;"	func	line:56
