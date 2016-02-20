@@ -31,7 +31,7 @@ func request2()interface{}{
 }
 
 // 新建一个async对象
-async:=new async.NewAsync()
+async:=new async.New()
 
 // 添加request1异步请求,第一个参数为该异步请求的唯一logo,第二个参数为异步完成后的回调函数,回调参数类型为func()interface{}
 async.Add("request1",request1)
