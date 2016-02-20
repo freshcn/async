@@ -27,7 +27,7 @@ func TestAsync(t *testing.T) {
 	fmt.Println("==============\nasync start")
 
 	startTime = time.Now().UnixNano()
-	async := NewAsync()
+	async := New()
 	async.Add("baidu", get, "http://www.baidu.com")
 	async.Add("sina", get, "http://www.sina.com")
 	async.Add("sohu", get, "http://www.sohu.com")
