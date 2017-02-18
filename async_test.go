@@ -37,7 +37,7 @@ func TestAsync(t *testing.T) {
 		rs := <-chans
 
 		if len(rs) == 4 {
-			for k, _ := range rs {
+			for k := range rs {
 				fmt.Printf("name: %s, \t done \n", k)
 			}
 		} else {

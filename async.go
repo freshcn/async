@@ -15,23 +15,23 @@ type asyncRun struct {
 	Params  []reflect.Value
 }
 
-// 异步执行对象
+// Async 异步执行对象
 type Async struct {
 	count int
 	tasks map[string]asyncRun
 }
 
-// 老版本的兼容
+// NewAsync 老版本的兼容
 func NewAsync() Async {
 	return New()
 }
 
-// 创建一个新的异步执行对象
+// New 创建一个新的异步执行对象
 func New() Async {
 	return Async{tasks: make(map[string]asyncRun)}
 }
 
-// 添加异步执行任务
+// Add 添加异步执行任务
 // name 任务名，结果返回时也将放在任务名中
 // handler 任务执行函数，将需要被执行的函数导入到程序中
 // params 任务执行函数所需要的参数
@@ -63,7 +63,7 @@ func (a *Async) Add(name string, handler interface{}, params ...interface{}) boo
 	return false
 }
 
-// 任务执行函数，成功时将返回一个用于接受结果的channel
+// Run 任务执行函数，成功时将返回一个用于接受结果的channel
 // 在所有异步任务都运行完成时，结果channel将会返回一个map[string][]interface{}的结果。
 func (a *Async) Run() (chan map[string][]interface{}, bool) {
 	if a.count < 1 {
@@ -113,7 +113,7 @@ func (a *Async) Run() (chan map[string][]interface{}, bool) {
 	return result, true
 }
 
-// 清空任务队列.
+// Clean 清空任务队列.
 func (a *Async) Clean() {
 	a.tasks = make(map[string]asyncRun)
 }
